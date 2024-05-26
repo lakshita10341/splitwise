@@ -8,9 +8,10 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  final name = TextEditingController();
   final email = TextEditingController();
   final password = TextEditingController();
-  final name = TextEditingController();
+ 
   final phoneNumber = TextEditingController();
   bool isVisible = false;
   bool emailValidate = true;
@@ -70,8 +71,8 @@ class _SignUpState extends State<SignUp> {
                         setState(() {
                           emailValidate = email.text.isNotEmpty;
                           passwordValidate = password.text.isNotEmpty;
-                          nameValidate = name.text.isEmpty;
-                          phoneNumValidate = phoneNumber.text.isEmpty;
+                          nameValidate = name.text.isNotEmpty;
+                          phoneNumValidate = phoneNumber.text.isNotEmpty;
                         });
                         if (emailValidate &&
                             passwordValidate &&
@@ -93,12 +94,15 @@ class _SignUpState extends State<SignUp> {
                       onPressed: () {
                         Navigator.pushNamed(context, '/Login');
                       },
+                      
                       child: Text(
                         'LogIn',
+                      
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 16,
                           fontFamily: 'Lato',
+                          
                         ),
                       ),
                     ),
@@ -125,11 +129,13 @@ class _SignUpState extends State<SignUp> {
                         child: Padding(
                     padding: EdgeInsets.fromLTRB(16, 0, 16, 0),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Padding(
                           padding: EdgeInsets.only(top: 12, bottom: 6),
                           child: Text(
                             'Name',
+                              textAlign: TextAlign.left,
                             style: TextStyle(
                               fontSize: 16,
                             ),
@@ -149,6 +155,7 @@ class _SignUpState extends State<SignUp> {
                           padding: EdgeInsets.only(top: 12, bottom: 6),
                           child: Text(
                             'Email Address',
+                              textAlign: TextAlign.left,
                             style: TextStyle(
                               fontSize: 16,
                             ),
@@ -168,6 +175,7 @@ class _SignUpState extends State<SignUp> {
                           padding: EdgeInsets.only(top: 12, bottom: 6),
                           child: Text(
                             'Password',
+                              textAlign: TextAlign.left,
                             style: TextStyle(
                               fontSize: 16,
                             ),
@@ -199,6 +207,7 @@ class _SignUpState extends State<SignUp> {
                           padding: EdgeInsets.only(top: 12, bottom: 6),
                           child: Text(
                             'Phone Number',
+                              textAlign: TextAlign.left,
                             style: TextStyle(
                               fontSize: 16,
                             ),
