@@ -184,7 +184,10 @@ class LoginSignUpScreen extends StatelessWidget {
                           TextButton(
                             onPressed: () {},
                             child: Container(
-                              color: Color.fromRGBO(241, 237, 237, 1.000),
+                                decoration: BoxDecoration(
+                           color: Color.fromRGBO(241, 237, 237, 1.000),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
                               height: 50,
                               width: 110,
                               child: Image.asset(
@@ -197,7 +200,11 @@ class LoginSignUpScreen extends StatelessWidget {
                           TextButton(
                             onPressed: () {},
                             child: Container(
-                              color: Color.fromRGBO(21, 125, 195, 1.000),
+                              
+                                decoration: BoxDecoration(
+                           color: Color.fromRGBO(21, 125, 195, 1.000),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
                               height: 50,
                               width: 110,
                               child: Image.asset(
@@ -406,9 +413,13 @@ class _LoginState extends State<Login> {
                     TextButton(
                       onPressed: () {},
                       child: Container(
-                        color: Color.fromRGBO(241, 237, 237, 1.000),
+                       
                         height: 50,
                         width: 110,
+                         decoration: BoxDecoration(
+                           color: Color.fromRGBO(241, 237, 237, 1.000),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
                         child: Image.asset(
                           'image/google.png',
                           height: 38,
@@ -419,14 +430,20 @@ class _LoginState extends State<Login> {
                     TextButton(
                       onPressed: () {},
                       child: Container(
-                        color: Color.fromRGBO(21, 125, 195, 1.000),
+                        
                         height: 50,
                         width: 110,
+                         decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          color: Color.fromRGBO(21, 125, 195, 1.000),
+                        ),
                         child: Image.asset(
                           'image/fb.png',
                           height: 38,
                           width: 38,
+                          
                         ),
+                        
                       ),
                     ),
                   ],
@@ -672,9 +689,13 @@ class _SignUpState extends State<SignUp> {
                     TextButton(
                       onPressed: () {},
                       child: Container(
-                        color: Color.fromRGBO(241, 237, 237, 1.000),
+                       
                         height: 50,
                         width: 110,
+                         decoration: BoxDecoration(
+                           color: Color.fromRGBO(241, 237, 237, 1.000),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
                         child: Image.asset(
                           'image/google.png',
                           height: 38,
@@ -685,14 +706,20 @@ class _SignUpState extends State<SignUp> {
                     TextButton(
                       onPressed: () {},
                       child: Container(
-                        color: Color.fromRGBO(21, 125, 195, 1.000),
-                        height: 50,
+                         height: 50,
                         width: 110,
+                         decoration: BoxDecoration(
+                           color: Color.fromRGBO(21, 125, 195, 1.000),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                       
                         child: Image.asset(
                           'image/fb.png',
                           height: 38,
                           width: 38,
                         ),
+                      
+                        
                       ),
                     ),
                   ],
