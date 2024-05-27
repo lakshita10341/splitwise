@@ -68,6 +68,7 @@ class _HomePageState extends State<HomePage> {
                     Container(
                       height: 62,
                       width: 62,
+                      padding: EdgeInsets.only(bottom: 8),
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: Colors.white,
@@ -78,6 +79,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     Container(
+                      padding: EdgeInsets.only(bottom: 8),
                       child: const Text(
                         'Name',
                         style: TextStyle(
@@ -91,6 +93,7 @@ class _HomePageState extends State<HomePage> {
               Container(
                 height: 80,
                 width: 320,
+                padding: EdgeInsets.only(bottom: 8),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
@@ -113,7 +116,7 @@ class _HomePageState extends State<HomePage> {
             right: 0,
             child: Container(
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height / 2,
+              height: MediaQuery.of(context).size.height * 0.6,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: const BorderRadius.only(
@@ -121,13 +124,53 @@ class _HomePageState extends State<HomePage> {
                   topRight: Radius.circular(16),
                 ),
               ),
-              child: SingleChildScrollView(
+              child: DefaultTabController(
+                length: 3,
                 child: Column(
                   children: <Widget>[
-                  
+                    TabBar(tabs: [
+                      Tab(
+                        child: Text(
+                          'Friends'
+                          ),
+                          ),
+                          Tab(
+                        child: Text(
+                          'Groups'
+                          ),
+                          ),
+                          Tab(
+                        child: Text(
+                          'Activities'
+                          ),
+                          ),
+                    ],),
+                   Expanded(
+                    child:   TabBarView(
+                        children: <Widget>[
+                          SingleChildScrollView( 
+                           child:  Text('Groups',
+                          
+                           ),
+                          ),
+                        SingleChildScrollView( 
+                           child:  Text('Friends',
+                           
+                           ),
+                          ),
+                       SingleChildScrollView( 
+                           child:  Text('Activities',
+                           
+                           ),
+                          ),
+                        ],
+                      ),
+                   ),
                   ],
                 ),
+                
               ),
+             
             ),
           ),
         ],

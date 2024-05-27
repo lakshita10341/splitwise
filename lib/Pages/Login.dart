@@ -60,7 +60,7 @@ class _LoginState extends State<Login> {
                 padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
+                    children: <Widget>[
                     TextButton(
                       onPressed: () {
                         setState(() {
@@ -117,12 +117,14 @@ class _LoginState extends State<Login> {
                       child: Scrollbar(
                         child: SingleChildScrollView(
                           child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                         
                         Padding(
                           padding: EdgeInsets.only(top: 12, bottom: 6),
                           child: Text(
                             'Email Address',
+                             textAlign: TextAlign.left,
                             style: TextStyle(
                               fontSize: 16,
                             ),
@@ -142,6 +144,7 @@ class _LoginState extends State<Login> {
                           padding: EdgeInsets.only(top: 12, bottom: 6),
                           child: Text(
                             'Password',
+                             textAlign: TextAlign.left,
                             style: TextStyle(
                               fontSize: 16,
                             ),
@@ -168,7 +171,21 @@ class _LoginState extends State<Login> {
                                   : Icons.visibility_off),
                             ),
                           ),
-                        ),
+                        ),  
+                       Positioned(
+                        right: 0,
+                        child:  TextButton(
+                          onPressed: (){}, 
+                          child: Text(
+                            'Forgot your password?',
+                            
+                            style: TextStyle(
+                              color: Color.fromRGBO(116, 116, 116, 1),
+                              
+                              fontSize: 14,
+                            ),
+                            ),
+                            ),),
                       ],
                           ),
                       ),
