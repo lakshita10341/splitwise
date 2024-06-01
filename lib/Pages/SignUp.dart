@@ -18,6 +18,7 @@ class _SignUpState extends State<SignUp> {
   bool passwordValidate = true;
   bool nameValidate = true;
   bool phoneNumValidate = true;
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(

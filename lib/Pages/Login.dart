@@ -73,9 +73,11 @@ class _LoginState extends State<Login> {
                       },
                       child: Text(
                         'Login',
+
                         style: TextStyle(
                           fontSize: 22,
                           color: Colors.white,
+        // 
                           fontFamily: 'Lato',
                         ),
                       ),
@@ -83,7 +85,8 @@ class _LoginState extends State<Login> {
                     TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/SignUp');
-                      },
+                      },  
+                      
                       child: Text(
                         'SignUp',
                         style: TextStyle(
