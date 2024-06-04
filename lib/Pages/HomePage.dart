@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+// import 'package:flutter/widgets.dart';
 // import 'dart:ui';
 
 class OweItems extends StatelessWidget {
@@ -18,18 +18,18 @@ class OweItems extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color cirColour = colour ?? Color.fromRGBO(6,154,3,1);
+    Color cirColour = colour ?? const Color.fromRGBO(6,154,3,1);
     if (description == "owes you") {
-      cirColour = Color.fromRGBO(231, 2, 2, 1);
+      cirColour = const Color.fromRGBO(231, 2, 2, 1);
     }
     return Container(
-      padding: EdgeInsets.all(8),
+      padding:const EdgeInsets.all(8),
       width: MediaQuery.of(context).size.width * 0.9,
       height: 70,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(8),
-       boxShadow: [
+       boxShadow:const [
         BoxShadow(
           blurRadius: 2,
           color: Color.fromRGBO(0, 0, 0, 0.18),
@@ -40,14 +40,14 @@ class OweItems extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Container(
+          SizedBox(
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
                   height: 46,
                   width: 46,
-                  padding: EdgeInsets.only(bottom: 8),
+                  padding: const EdgeInsets.only(bottom: 8),
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: Colors.white,
@@ -65,7 +65,7 @@ class OweItems extends StatelessWidget {
                     ),
                   ),
                 ),
-                Container(
+                SizedBox(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -73,20 +73,20 @@ class OweItems extends StatelessWidget {
                       Column(
                         children: [
                           Padding(
-                            padding: EdgeInsets.all(4),
+                            padding:const EdgeInsets.all(4),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
                                   name,
-                                  style: TextStyle(
+                                  style:const TextStyle(
                                     fontSize: 12,
                                     color: Color.fromRGBO(130, 125, 125, 1),
                                   ),
                                 ),
                                 Text(
                                   description,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontSize: 10,
                                     color: Color.fromRGBO(130, 125, 125, 1),
                                   ),
@@ -102,10 +102,10 @@ class OweItems extends StatelessWidget {
               ],
             ),
           ),
-          Container(
+          SizedBox(
             child: Row(
               children: [
-                Text(
+                const Text(
                   '\u{20B9}',
                   style: TextStyle(
                     fontSize: 12,
@@ -113,7 +113,7 @@ class OweItems extends StatelessWidget {
                 ),
                 Text(
                   amount,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 24,
                     color: Color.fromRGBO(97, 97, 97, 1),
                   ),
@@ -147,7 +147,7 @@ class _HomePageState extends State<HomePage> {
                 height: 20,
               ),
               Padding(
-                padding: EdgeInsets.all(8),
+                padding: const EdgeInsets.all(8),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
@@ -162,11 +162,11 @@ class _HomePageState extends State<HomePage> {
                         fontSize: 24,
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          Container(
+                          SizedBox(
                             child: IconButton(
                               icon: const Icon(
                                 Icons.search,
@@ -175,7 +175,7 @@ class _HomePageState extends State<HomePage> {
                               onPressed: () {},
                             ),
                           ),
-                          Container(
+                          SizedBox(
                             child: IconButton(
                               icon: const Icon(
                                 Icons.more_vert,
@@ -190,13 +190,13 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
-              Container(
+              SizedBox(
                 child: Column(
                   children: [
                     Container(
                       height: 62,
                       width: 62,
-                      padding: EdgeInsets.only(bottom: 8),
+                      padding: const EdgeInsets.only(bottom: 8),
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: Colors.white,
@@ -205,7 +205,7 @@ class _HomePageState extends State<HomePage> {
                           color: const Color.fromRGBO(231, 2, 2, 1),
                         ),
                       ),
-                      child: Text('N',
+                      child: const Text('N',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Color.fromRGBO(76, 187, 155, 1),
@@ -214,7 +214,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     Container(
-                      padding: EdgeInsets.only(bottom: 8),
+                      padding: const EdgeInsets.only(bottom: 8),
                       child: const Text(
                         'Name',
                         style: TextStyle(
@@ -228,14 +228,14 @@ class _HomePageState extends State<HomePage> {
               Container(
                 height: 80,
                 width: 320,
-                padding: EdgeInsets.all(8),
+                padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
+                  boxShadow:const [
                     BoxShadow(
                       blurRadius: 4,
-                      color: const Color.fromRGBO(0, 0, 0, 0.1),
+                      color:  Color.fromRGBO(0, 0, 0, 0.1),
                     ),
                   ],
                 ),
@@ -243,13 +243,13 @@ class _HomePageState extends State<HomePage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
+                   const SizedBox(
                       child: Column(
                         children: <Widget>[
-                          Container(
+                         SizedBox(
                             child: Text('You owe'),
                           ),
-                          Container(
+                         SizedBox(
                             child: Text(
                               '\u{20B9} 500',
                               style: TextStyle(
@@ -265,15 +265,15 @@ class _HomePageState extends State<HomePage> {
                     Container(
                       width: 2,
                       height: 50,
-                      color: Color.fromRGBO(225, 225, 225, 1),
+                      color:  const Color.fromRGBO(225, 225, 225, 1),
                     ),
-                    Container(
+                    const SizedBox(
                       child: Column(
                         children: <Widget>[
-                          Container(
+                          SizedBox(
                             child: Text('You owe'),
                           ),
-                          Container(
+                          SizedBox(
                             child: Text(
                               '\u{20B9} 500',
                               style: TextStyle(
@@ -289,15 +289,15 @@ class _HomePageState extends State<HomePage> {
                     Container(
                       width: 2,
                       height: 50,
-                      color: Color.fromRGBO(225, 225, 225, 1),
+                      color: const Color.fromRGBO(225, 225, 225, 1),
                     ),
-                    Container(
+                   const SizedBox(
                       child: Column(
                         children: <Widget>[
-                          Container(
+                         SizedBox(
                             child: Text('You owe'),
                           ),
-                          Container(
+                          SizedBox(
                             child: Text(
                               '\u{20B9} 500',
                               style: TextStyle(
@@ -322,14 +322,14 @@ class _HomePageState extends State<HomePage> {
             child: Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height * 0.6,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.white,
-                borderRadius: const BorderRadius.only(
+                borderRadius:  BorderRadius.only(
                   topLeft: Radius.circular(16),
                   topRight: Radius.circular(16),
                 ),
               ),
-              child: DefaultTabController(
+              child: const DefaultTabController(
                 length: 3,
                 child: Column(
                   children: <Widget>[

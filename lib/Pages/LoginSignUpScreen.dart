@@ -15,7 +15,7 @@ class LoginSignUpScreen extends StatelessWidget {
             child: Container(
               width: 500,
               height: 500,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 color: Color.fromRGBO(76, 187, 155, 1.000),
               ),
@@ -25,20 +25,20 @@ class LoginSignUpScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Container(
+              SizedBox(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    Container(
+                    SizedBox(
                       child: Image.asset(
                         'image/logo.png',
                         height: 126,
                         width: 128,
                       ),
                     ),
-                    SizedBox(height: 20),
-                    Container(
+                   const SizedBox(height: 20),
+                   const SizedBox(
                       child: Text(
                         'SPLITWISE',
                         style: TextStyle(
@@ -51,7 +51,7 @@ class LoginSignUpScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              Container(
+              SizedBox(
                 child: Column(
                   children: <Widget>[
                     TextButton(
@@ -66,8 +66,8 @@ class LoginSignUpScreen extends StatelessWidget {
                         ),
                         height: 50,
                         width: 250,
-                        child: Center(
-                          child: const Text(
+                        child:const Center(
+                          child:  Text(
                             'Login',
                             style: TextStyle(
                               color: Colors.white,
@@ -77,7 +77,7 @@ class LoginSignUpScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: 20),
+                   const SizedBox(height: 20),
                     TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/SignUp');
@@ -90,7 +90,7 @@ class LoginSignUpScreen extends StatelessWidget {
                            color: Color.fromRGBO(76, 187, 155, 1.000),
                           borderRadius: BorderRadius.circular(8),
                         ),
-                        child: Center(
+                        child:const Center(
                           child: const Text(
                             'SignUp',
                             style: TextStyle(
@@ -101,8 +101,8 @@ class LoginSignUpScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: 20),
-                    Container(
+                   const SizedBox(height: 20),
+                    SizedBox(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
@@ -127,7 +127,7 @@ class LoginSignUpScreen extends StatelessWidget {
                             child: Container(
                               
                                 decoration: BoxDecoration(
-                           color: Color.fromRGBO(21, 125, 195, 1.000),
+                           color: const Color.fromRGBO(21, 125, 195, 1.000),
                           borderRadius: BorderRadius.circular(8),
                         ),
                               height: 50,

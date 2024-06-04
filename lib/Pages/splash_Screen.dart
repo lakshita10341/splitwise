@@ -14,7 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 3),
+        const Duration(seconds: 3),
         () => Navigator.pushReplacementNamed(context, '/LoginSignUp'));
   }
 
@@ -31,14 +31,14 @@ class _SplashScreenState extends State<SplashScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Container(
+                SizedBox(
                   child: Image.asset(
                     'image/logo.png',
                     height: 126,
                     width: 128,
                   ),
                 ),
-                Container(
+               SizedBox(
                   child: Text(
                     'Splitwise',
                     style: TextStyle(
@@ -51,7 +51,7 @@ class _SplashScreenState extends State<SplashScreen> {
               ],
             ),
           ),
-          Container(
+         const SizedBox(
             child: Text('Split bills the easy way'),
           ),
         ],
